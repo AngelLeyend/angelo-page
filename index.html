@@ -1,104 +1,13 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="en" data-beasties-container="">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Bonita</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f8ff;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            text-align: center;
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-        h1 {
-            color: #333333;
-        }
-        p {
-            color: #666666;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 20px;
-            font-size: 16px;
-            color: #ffffff;
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-        .button:hover {
-            background-color: #0056b3;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Bienvenido a mi Página Bonita</h1>
-        <p>Esta es una página de ejemplo con un diseño simple y agradable.</p>
-        <a href="#" class="button">Haz clic aquí</a>
-    </div>
-
-    <!-- Añadimos la tabla para mostrar los datos -->
-    <table id="usersTable">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Email</th>
-            </tr>
-        </thead>
-        <tbody id="userTableBody">
-            <!-- Los datos se insertarán aquí dinámicamente -->
-        </tbody>
-    </table>
-
-    <script>
-        // Modificamos el script para usar el ID correcto
-        fetch('data.json')
-            .then(response => response.json())
-            .then(data => {
-                const tbody = document.getElementById('userTableBody');
-                tbody.innerHTML = ''; // Limpiamos cualquier contenido existente
-                data.users.forEach(user => {
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td>${user.id}</td>
-                        <td>${user.name}</td>
-                        <td>${user.email}</td>
-                    `;
-                    tbody.appendChild(row);
-                });
-            })
-            .catch(error => console.error('Error fetching data:', error));
-
-        // Script para el botón
-        document.querySelector('.button').addEventListener('click', function() {
-            alert('¡Hola Mundo!');
-        });
-    </script>
-</body>
+  <meta charset="utf-8">
+  <title>AngularOdoo</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="styles.css"></head>
+<body ngcm="">
+  <app-root></app-root>
+<link rel="modulepreload" href="chunk-3VUEVFVL.js"><script src="polyfills.js" type="module"></script><script src="main.js" type="module"></script></body>
 </html>
